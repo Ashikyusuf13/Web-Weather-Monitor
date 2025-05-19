@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Lobster&family=Oswald:wght@200..700&display=swap');
+
+
+.search-icon {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  filter: drop-shadow(0 1px 2px #4e54c8aa);
+  transition: transform 0.2s, filter 0.2s;
+}
+.search-icon:hover {
+  transform: scale(1.15) rotate(-10deg);
+  filter: drop-shadow(0 2px 6px #4e54c8cc);
+}
+body{
+  margin: 0px;
+  padding: 0px;
+  background: linear-gradient(135deg, #2f3640 0%, #4e54c8 100%);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Oswald", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  transition: background 0.5s;
+}
+.weather-container{
+  width: 370px;
+  background: rgba(255,255,255,0.95);
+  padding: 28px 28px 22px 28px;
+  border-radius: 22px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.3s;
+}
+.weather-container:hover {
+  box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.28);
+}
+.input-container{
+  align-items: center;
+  display: flex;
+  width: 100%;
+  border: 2px solid #2f3640;
+  border-radius: 8px;
+  padding: 7px 10px;
+  overflow: hidden;
+  background: #f5f6fa;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+.input-container:focus-within {
+  border: 2px solid #4e54c8;
+  box-shadow: 0 0 8px #4e54c833;
+}
+.input-container input{
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 10px;
+  font-size: 17px;
+  font-family: "Fjalla One", serif;
+  font-weight: 400;
+  font-style: normal;
+  background: transparent;
+  color: #2f3640;
+}
+#image{
+  width: 130px;
+  height: 130px;
+  margin-top: 10px;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px #4e54c822;
+}
+.details-weather{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.degree{
+  font-size: 38px;
+  font-weight: bold;
+  color: #4e54c8;
+  text-shadow: 0 2px 8px #4e54c822;
+  margin-bottom: 2px;
+}
+
+.city{
+  color: rgb(17, 85, 201);
+  font-size: 48px;
+  font-family: "Lobster", cursive;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px #2f364088;
+}
+.country{
+  font-size: 22px;
+  color: #2f3640;
+  opacity: 0.8;
+}
+.cord{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 10px;
+}
+.cord div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f5f6fa;
+  padding: 6px 14px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px #2f364022;
+}
+.coor-humidity{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  font-family: "Fjalla One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.hum-wind{
+  display: flex;
+  justify-content: space-between;
+  gap: 90px;
+}
+/* Add subtle fade-in animation */
+.weather-container, .details-weather, .cord, .coor-humidity {
+  animation: fadeIn 1s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
